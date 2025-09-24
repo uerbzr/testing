@@ -1,7 +1,3 @@
-- Update `vite.config.js`
-- `npm install --save-dev vite-plugin-istanbul`
-
-```jsx
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import istanbul from "vite-plugin-istanbul";
@@ -17,10 +13,3 @@ export default defineConfig({
     }),
   ],
 });
-```
-
-- `npm install --save-dev @playwright/test`
-- `npx playwright install`
-
-- npm install --save-dev nyc
-- npx nyc report --reporter=html
