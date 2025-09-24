@@ -9,10 +9,8 @@ test("increments counter and collects coverage", async ({ page }) => {
   await expect(button).toBeVisible();
   await button.click();
   await expect(button).toHaveText(/count is 1/i);
-});
 
-// ✅ Extract coverage after all tests
-test.afterAll(async ({ page }) => {
+  // ✅ Extract coverage inside the test
   const coverage = await page.evaluate(() => window.__coverage__);
   if (coverage) {
     const coverageDir = path.resolve("./coverage");
