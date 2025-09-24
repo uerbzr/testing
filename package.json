@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
-    "test": "playwright test && npx nyc report --reporter=html"
+    "test": "start-server-and-test dev http://localhost:5173 test:run",
+    "test:run": "playwright test && nyc report --reporter=html"
   },
   "dependencies": {
     "react": "^19.1.1",
