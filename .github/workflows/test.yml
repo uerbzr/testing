@@ -25,6 +25,9 @@ jobs:
       - name: 🧪 Install Playwright browsers
         run: npx playwright install --with-deps
 
+      - name: 📊 Install NYC (Istanbul CLI)
+        run: npm install --save-dev nyc
+
       - name: 🚀 Start Vite dev server
         run: npm run dev &
         env:
